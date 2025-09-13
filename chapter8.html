@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Evolution | hungry shark evolution</title>
     <link rel="icon" type="image/png" href="Derp-Pikachu.png">
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    main{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: 000000;
+        background-color: #D3D3D3;
+        border-style:solid;
+        border-color: #C0C0C0;
+        border-width: 20px;
+        padding:2%;
+    }
 
+    a{
+        text-decoration: none;
+    }
+
+</style>
 <body>
     <header>
         <div
@@ -26,7 +42,7 @@
         <hr>
     </header>
 
-    <main>
+    <main style="text-align: justify;">
         <section>
             <article>
                 <h3>Contents</h3>
@@ -47,7 +63,7 @@
             </ul>
         </section>
 
-        <section>
+        <section style="border-style: solid; border-color: #78909C; border-block-color: #78909C; padding: 2%; margin-top: 2%; margin-bottom: 2%;">
             <h2><b>8.1</b> Development Testing</h2>
             <p> Development testing includes all testing activities that are carried out by the team developing the system. The tester of the software is usually the programmer who developed that software, although this is not always the case. Some development processes use programmer/tester pairs (Cusamano and Selby, 1998) where each  programmer has an associated tester who develops tests and assists with the testing process. For critical systems, a more formal process may be used, with a separate testing group within the development team. They are responsible for developing tests and maintaining detailed records of test results.</p>
             <p> During development, testing may be carried out at three levels of granularity:</p>
@@ -106,7 +122,7 @@
             </article>
         </section>
 
-        <section>
+        <section style="border-style: solid; border-color: #78909C; border-block-color: #78909C; padding: 2%; margin-top: 2%; margin-bottom: 2%;">
             <h2><b>8.2</b> Test-Driven Development</h2>
             <p> Test-driven development (TDD) is an approach to program development in which you interleave testing and code development (Beck, 2002; Jeffries and Melnik, 2007). Essentially, you develop the code incrementally, along with a test for that increment. You don’t move on to the next increment until the code that you have developed passes its test. Test-driven development was introduced as part of agile methods such as Extreme Programming. However, it can also be used in plan-driven development processes.</p>
             <p>The fundamental TDD process is shown in Figure 8.9. The steps in the process are as follows:</p>
@@ -131,7 +147,7 @@
             <p>Test-driven development has proved to be a successful approach for small and medium-sized projects. Generally, programmers who have adopted this approach are happy with it and find it a more productive way to develop software (Jeffries and Melnik, 2007). In some trials, it has been shown to lead to improved code quality; in others, the results have been inconclusive. However, there is no evidence that TDD leads to poorer quality code.</p>
         </section>
 
-        <section>
+        <section style="border-style: solid; border-color: #78909C; border-block-color: #78909C; padding: 2%; margin-top: 2%; margin-bottom: 2%;">
             <h2><b>8.3</b> Release Testing</h2>
             <p> Release testing is the process of testing a particular release of a system that is intended for use outside of the development team. Normally, the system release is for customers and users. In a complex project, however, the release could be for other teams that are developing related systems. For software products, the release could be for product management who then prepare it for sale.</p>
             <p> There are two important distinctions between release testing and system testing during the development process:</p>
@@ -188,7 +204,7 @@
             </article>
         </section>
 
-        <section>
+        <section style="border-style: solid; border-color: #78909C; border-block-color: #78909C; padding: 2%; margin-top: 2%; margin-bottom: 2%;">
             <h2><b>8.4</b> User Testing</h2>
             <p>User or customer testing is a stage in the testing process in which users or customers provide input and advice on system testing. This may involve formally testing a system that has been commissioned from an external supplier, or could be an informal process where users experiment with a new software product to see if they like it and that it does what they need. User testing is essential, even when comprehensive system and release testing have been carried out. The reason for this is that influences from the user’s working environment have a major effect on the reliability, performance, usability, and robustness of a system.</p>
             <p>It is practically impossible for a system developer to replicate the system’s working environment, as tests in the developer’s environment are inevitably artificial. For example, a system that is intended for use in a hospital is used in a clinical environment where other things are going on, such as patient emergencies, conversations with relatives, etc. These all affect the use of a system, but developers cannot include them in their testing environment.</p>
