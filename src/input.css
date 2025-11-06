@@ -1,1 +1,78 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-300: #c4b5fd;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  
+  --color-accent-light: #d3c2e2;                            
+  --color-accent-darker: #84639f;
+}
+
+@theme {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+      scroll-behavior: smooth;
+    }
+
+@layer components{
+    .navtext{
+      @apply px-3 py-2 sm:px-4 sm:py-2 text-sm sm:text-base font-medium text-gray-800 bg-white/50 rounded-lg hover:bg-primary-700 hover:text-white hover:scale-105 transition-all duration-300 shadow-sm active:scale-95;
+    }
+
+    .bg-border{
+      @apply bg-white/50 p-6 lg:p-8 mb-6 lg:mb-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01] border border-primary-300/20 rounded-2xl;
+    }
+
+    .article-border{
+      @apply bg-white/60 border border-primary-300/40 rounded-xl p-5 lg:p-6 mt-6 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.01] hover:border-primary-600/30;
+    }
+
+    .section-mwa{
+      @apply mx-5 mb-5 border border-primary-300/30 rounded-2xl bg-white/40 shadow-md;
+    }
+
+    .nav-a{
+      @apply border border-primary-300/40 shadow-lg rounded-xl p-4 lg:p-5 text-center font-semibold transition-all duration-300 hover:bg-primary-600 hover:text-white hover:scale-105 hover:shadow-lg bg-white/50;
+    }
+
+    .baddie{
+      @apply flex flex-col min-h-screen font-body bg-gradient-to-br from-primary-300 via-primary-300 to-accent-light;
+    }
+
+    .navi{
+      @apply flex flex-wrap justify-center gap-2 lg:gap-3 font-bold;
+    }
+
+    .logo-style{
+      @apply w-12 h-12 sm:w-14 sm:h-14 bg-primary-700 rounded-full flex items-center justify-center shadow-md hover:scale-110 hover:shadow-lg transition-all duration-300;
+    }
+    
+    .h1{
+      @apply text-3xl lg:text-4xl font-display font-bold text-primary-700 mb-6 leading-tight;
+    }
+
+    .h2{
+      @apply text-2xl lg:text-3xl font-display font-bold text-primary-700 mb-5 leading-snug;
+    }
+
+    .h3{
+      @apply text-xl lg:text-2xl font-display font-bold text-primary-700 mb-4 leading-snug;
+    }
+
+    .ol-ap{
+      @apply space-y-3 ml-6 list-decimal marker:text-primary-600 marker:font-semibold leading-relaxed;
+    }
+
+    .ul-ap{
+      @apply space-y-4 ml-6 list-disc marker:text-primary-600 leading-relaxed;
+    }
+
+    .div-grid{
+      @apply grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 items-start;
+    }
+
+}
