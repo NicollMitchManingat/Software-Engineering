@@ -1,78 +1,276 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-300: #c4b5fd;
-  --color-primary-600: #7c3aed;
-  --color-primary-700: #6d28d9;
-  
-  --color-accent-light: #d3c2e2;                            
-  --color-accent-darker: #84639f;
-}
+    --color-primary-300: #c4b5fd;
+    --color-primary-600: #7c3aed;
+    --color-primary-700: #6d28d9;
 
-@theme {
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+    --color-accent-light: #d3c2e2;
+    --color-accent-darker: #84639f;
 }
 
 html {
-      scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+@layer components {
+    .baddie {
+        @apply flex flex-col min-h-screen font-sans bg-gradient-to-br from-primary-300 via-primary-300 to-accent-light;
     }
 
-@layer components{
-    .navtext{
-      @apply px-3 py-2 sm:px-4 sm:py-2 text-sm sm:text-base font-medium text-gray-800 bg-white/50 rounded-lg hover:bg-primary-700 hover:text-white hover:scale-105 transition-all duration-300 shadow-sm active:scale-95;
+    .mine {
+        @apply bg-accent-light sticky top-0 left-0 w-full shadow-md z-50;
     }
 
-    .bg-border{
-      @apply bg-white/50 p-6 lg:p-8 mb-6 lg:mb-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.01] border border-primary-300/20 rounded-2xl;
+    .headercontainer {
+        @apply mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-5;
     }
 
-    .article-border{
-      @apply bg-white/60 border border-primary-300/40 rounded-xl p-5 lg:p-6 mt-6 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.01] hover:border-primary-600/30;
+    .headerflex {
+        @apply flex flex-col lg:flex-row justify-between items-center gap-4;
     }
 
-    .section-mwa{
-      @apply mx-5 mb-5 border border-primary-300/30 rounded-2xl bg-white/40 shadow-md;
+    .logosection {
+        @apply flex items-center gap-3;
     }
 
-    .nav-a{
-      @apply border border-primary-300/40 shadow-lg rounded-xl p-4 lg:p-5 text-center font-semibold transition-all duration-300 hover:bg-primary-600 hover:text-white hover:scale-105 hover:shadow-lg bg-white/50;
+    .logocircol {
+        @apply w-12 h-12 sm:w-14 sm:h-14 bg-primary-600 rounded-full flex items-center justify-center shadow-md;
     }
 
-    .baddie{
-      @apply flex flex-col min-h-screen font-body bg-gradient-to-br from-primary-300 via-primary-300 to-accent-light;
+    .logotext {
+        @apply text-2xl sm:text-3xl text-white;
     }
 
-    .navi{
-      @apply flex flex-wrap justify-center gap-2 lg:gap-3 font-bold;
+    .titulo {
+        @apply text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800;
     }
 
-    .logo-style{
-      @apply w-12 h-12 sm:w-14 sm:h-14 bg-primary-700 rounded-full flex items-center justify-center shadow-md hover:scale-110 hover:shadow-lg transition-all duration-300;
-    }
-    
-    .h1{
-      @apply text-3xl lg:text-4xl font-display font-bold text-primary-700 mb-6 leading-tight;
+    .main-nav {
+        @apply flex flex-wrap justify-center gap-2 lg:gap-3 font-bold;
     }
 
-    .h2{
-      @apply text-2xl lg:text-3xl font-display font-bold text-primary-700 mb-5 leading-snug;
+    .nav-link {
+        @apply px-3 py-2 sm:px-4 sm:py-2 text-sm sm:text-base font-medium text-gray-800 bg-white/50 rounded-lg shadow-sm;
     }
 
-    .h3{
-      @apply text-xl lg:text-2xl font-display font-bold text-primary-700 mb-4 leading-snug;
+    .nav-link:hover {
+        @apply bg-primary-700 text-white;
     }
 
-    .ol-ap{
-      @apply space-y-3 ml-6 list-decimal marker:text-primary-600 marker:font-semibold leading-relaxed;
+    .header-line {
+        @apply h-1 bg-gradient-to-r from-primary-600 to-accent-darker;
     }
 
-    .ul-ap{
-      @apply space-y-4 ml-6 list-disc marker:text-primary-600 leading-relaxed;
+    .minecontainer {
+        @apply mx-auto px-4 lg:px-6 py-6 lg:py-8;
     }
 
-    .div-grid{
-      @apply grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 items-start;
+    .insection {
+        @apply mx-5 mb-12 bg-white/70 rounded-3xl p-8 lg:p-10 shadow-xl border-2 border-primary-600/20;
     }
 
+    .pagetitle {
+        @apply text-3xl lg:text-4xl font-bold text-primary-700 mb-6 leading-tight;
+    }
+
+    .intrograph {
+        @apply text-lg leading-relaxed text-gray-700 mb-8;
+    }
+
+    .purposegrid {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8;
+    }
+
+    .purposebox {
+        @apply rounded-2xl p-6 shadow-lg border-2 border-primary-600/30 bg-white;
+    }
+
+    .purposetitle {
+        @apply text-xl font-bold text-primary-700 mb-3;
+    }
+
+    .objection {
+        @apply mx-5 mb-12 bg-white/70 rounded-3xl p-8 lg:p-10 shadow-xl border-2 border-primary-600/20;
+    }
+
+    .contention {
+        @apply mx-5 mb-12 bg-white/70 rounded-3xl p-8 lg:p-10 shadow-xl border-2 border-primary-600/20;
+    }
+
+    .sectionheader {
+        @apply mb-8;
+    }
+
+    .section-tag {
+        @apply inline-block px-4 py-2 bg-primary-700 text-white text-sm font-bold rounded-full mb-3;
+    }
+
+    .sectiontitle {
+        @apply text-2xl lg:text-3xl font-bold text-primary-700 leading-snug;
+    }
+
+    .obj-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    }
+
+    .obj-card {
+        @apply bg-white rounded-2xl p-6 shadow-md border-2 border-primary-600/20 flex items-start gap-4;
+    }
+
+    .obj-cardp {
+        @apply text-gray-700 leading-relaxed;
+    }
+
+    .contents-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    }
+
+    .content-card {
+        @apply bg-white rounded-2xl p-6 shadow-md border-2 border-primary-600/20 relative block transition-all duration-300;
+    }
+
+    .content-card:hover {
+        @apply shadow-xl border-primary-600 transform -translate-y-1;
+    }
+
+    .content-num {
+        @apply inline-block px-3 py-1 bg-gradient-to-r from-primary-600 to-accent-darker text-white text-sm font-bold rounded-full mb-3;
+    }
+
+    .content-title {
+        @apply text-xl font-bold text-primary-700 mb-2;
+    }
+
+    .content-desc {
+        @apply text-gray-600 mb-4;
+    }
+
+    .content-arrow {
+        @apply absolute bottom-6 right-6 text-2xl text-primary-600 font-bold;
+    }
+
+    .mine-section {
+        @apply mx-5 mb-12 bg-white/70 rounded-3xl p-8 lg:p-10 shadow-xl border-2 border-primary-600/20;
+    }
+
+    .section-label {
+        @apply inline-block px-4 py-2 bg-primary-700 text-white text-sm font-bold rounded-full mb-4;
+    }
+
+    .section-heading {
+        @apply text-2xl lg:text-3xl font-bold text-primary-700 mb-5 leading-snug;
+    }
+
+    .section-text {
+        @apply text-lg leading-relaxed text-gray-700 mb-8;
+    }
+
+    .content-article {
+        @apply bg-white/80 rounded-2xl p-6 lg:p-8 mt-8 gap-2 flex flex-col border border-primary-600/20;
+    }
+
+    .article-label {
+        @apply inline-block px-3 py-1 bg-gradient-to-r from-primary-600 to-accent-darker text-white text-sm font-bold rounded-full mb-3;
+    }
+
+    .article-heading {
+        @apply text-xl lg:text-2xl font-bold text-primary-700 mb-4 leading-snug;
+    }
+
+    .article-text {
+        @apply text-base leading-relaxed text-gray-700 mb-6;
+    }
+
+    .info-box {
+        @apply bg-white rounded-2xl p-6 border-2 border-primary-300/50 shadow-sm flex flex-col gap-2;
+    }
+
+    .info-title {
+        @apply text-lg font-bold text-primary-700 mb-4;
+    }
+
+    .info-list {
+        @apply list-none p-0 m-0;
+    }
+
+    .info-label {
+        @apply font-bold p-3 tracking-wide text-white rounded-lg uppercase bg-gradient-to-r from-primary-600 to-accent-darker hover:from-primary-700 hover:to-accent-darker hover:shadow-md hover:scale-101 duration-500;
+    }
+
+    .info-item {
+        @apply p-3 bg-gray-100 rounded-lg border-l-4 border-primary-600 text-gray-700 transition-all duration-300;
+    }
+
+    .requirement {
+        @apply italic text-gray-700 mb-4 p-4 bg-white/80 rounded-xl border-l-4 border-primary-600;
+    }
+
+    .grid-two {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    }
+
+    .grid-three {
+        @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+    }
+
+    .grid-four {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+    }
+
+    .grid-box {
+        @apply bg-white rounded-2xl p-6 shadow-md border-2 border-primary-600/20;
+    }
+
+    .grid-title {
+        @apply text-lg font-bold text-primary-700 mb-2;
+    }
+
+    .minefooter {
+        @apply bg-accent-light shadow-2xl mt-12;
+    }
+
+    .footerline {
+        @apply h-1 bg-gradient-to-r from-primary-600 via-accent-darker to-accent-darker;
+    }
+
+    .footercontainer {
+        @apply mx-auto px-4 sm:px-6 lg:px-8 py-6;
+    }
+
+    .footercontent {
+        @apply text-center;
+    }
+
+    .footercopyright {
+        @apply text-gray-800 font-semibold text-lg mb-2;
+    }
+
+    .footernames {
+        @apply flex justify-center gap-3 flex-wrap text-gray-700;
+    }
+
+    .footerinfo {
+        @apply mt-4 pt-4 border-t border-gray-400;
+    }
+
+    .footerinfoh4 {
+        @apply text-gray-600 mb-2;
+    }
+
+    .footerinfop {
+        @apply text-sm text-gray-600;
+    }
+
+    .backtop {
+        @apply fixed bottom-8 right-8 w-14 h-14 bg-primary-600 text-white rounded-full shadow-2xl flex items-center justify-center z-40 transition-all duration-300;
+    }
+
+    .backtop:hover {
+        @apply bg-primary-700 transform scale-110 shadow-xl;
+    }
+
+    .backtop-icon {
+        @apply text-2xl font-bold;
+    }
 }
