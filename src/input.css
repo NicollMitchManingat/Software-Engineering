@@ -33,7 +33,7 @@
         @apply w-12 h-12 sm:w-14 sm:h-14 bg-primary-700 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300
     }
     .navtext{
-        @apply px-3 py-2 my-2 text-center sm:px-4 sm:py-2 text-sm sm:text-sm xl:text-base font-medium text-gray-800 bg-white/50 rounded-lg hover:bg-primary-700 hover:text-white hover:scale-105 transition-all duration-300 shadow-sm
+        @apply px-3 py-2 my-2 text-center sm:px-4 sm:py-2 text-sm sm:text-sm xl:text-base font-bold text-gray-800 bg-white/50 rounded-lg hover:bg-primary-700 hover:text-white hover:scale-105 transition-all duration-300 shadow-sm
     }
     .burger-1{
         @apply absolute right-0 top-full mt-2 hidden peer-checked:block z-50 bg-white shadow-lg rounded-lg p-4 min-w-max
@@ -62,7 +62,7 @@
     .content-box-aside{
         @apply mt-8 p-6 bg-linear-to-br from-accent-light to-accent-darker rounded-xl border-2 border-primary-300 shadow-inner
     }
-    .content-box{
+    .content-box-ron{
         @apply block p-3 bg-white/70 rounded-lg hover:bg-white hover:pl-6 hover:shadow-md transition-all duration-300
     }
     .Introduction-Section-article{
